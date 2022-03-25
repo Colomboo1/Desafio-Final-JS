@@ -1,49 +1,7 @@
 
-
-function loadoven() {
-    
-    let tmold=Number(prompt("el molde tiene 4 cavidades o 5?"));
-    let blow=Number(prompt("a cuantos golpes va la divisora?"));
-    let time=Number(prompt("cuanto es el tiempo de horneo"));
-    let loader= parseInt(((blow/tmold)*time)/32);
-    console.log(tmold,blow,time)
-    return (
-        alert(loader+" Son los moldes que debe cargar")
-    )   
-} 
-
-function moldcount(){
-    
-    let tmold=Number(prompt("el molde tiene 4 cavidades o 5?"));
-    let blow=Number(prompt("a cuantos golpes va la divisora?"));
-    let countmold= parseInt(blow/tmold);
-    return (
-        alert("deben pasar "+ countmold + " moldes por minuto")
-    )    
-}
-
-
-function masstime(){
-    let mass=Number(prompt("cuantos kilos de baja?"));
-    let blow=Number(prompt("a cuantos golpes va la divisora?"));
-    let product=Number(prompt("a cuanto pesa el producto?"));
-    let totaldrop= parseInt(((mass*1000)/product)/blow);
-    return (
-        alert("son: "+ totaldrop + " minutos de IPFM")
-    )
-}
-
-function resumeProducts (){
-const nombres= productos.map((name) =>"\n"+ name.nombre);
-console.log(nombres);
-alert(` Los productos para elegir son: \n ${nombres} `)
-}
-
-
-
 const productos=[
     Mesa335={
-        nombre:"Pan de Mesa Lactal 335g",
+        nombre:"pan de Mesa Lactal 335g",
         molde:5,
         peso:335,
         conTapa:false,
@@ -55,7 +13,7 @@ const productos=[
 
     },
     Salvado350={
-        nombre:"Salvado chico Lactal 350g",
+        nombre:"salvado chico Lactal 350g",
         molde:5,
         peso:410,
         conTapa:false,
@@ -67,7 +25,7 @@ const productos=[
 
     },	
     SemillasLactal={
-        nombre:"Pan semillas Lactal 370g",
+        nombre:"pan semillas Lactal 370g",
         molde:5,
         peso:410,
         conTapa:false,
@@ -79,7 +37,7 @@ const productos=[
 
     },	
     LacteoChico={
-        nombre:"Pan lacteo chico Fargo 470g ",
+        nombre:"pan lacteo chico Fargo 470g ",
         molde:5,
         peso:515,
         conTapa:true,
@@ -103,7 +61,7 @@ const productos=[
 
     },	
     Liviano={
-        nombre:"Pan liviano Bimbo 400g",
+        nombre:"pan liviano Bimbo 400g",
         molde:5,
         peso:465,
         conTapa:true,
@@ -115,7 +73,7 @@ const productos=[
 
     },	
     PanBlanco={
-        nombre:"Pan blanco bimbo 320g",
+        nombre:"pan blanco bimbo 320g",
         molde:4,
         peso:360,
         conTapa:false,
@@ -126,7 +84,7 @@ const productos=[
         marca:"fargo"
     }, 
     SalvadoF={ 
-        nombre:"Pan de salvadp Fargo 350g",
+        nombre:"pan de salvadp Fargo 350g",
         molde:4,
         peso:415,
         conTapa:false,
@@ -137,7 +95,7 @@ const productos=[
         marca:"fargo"
     }, 	
     DobleIntegral={
-        nombre:"Pan doble integral fargo 440g",
+        nombre:"pan doble integral fargo 440g",
         molde:4,
         peso:510,
         conTapa:false,
@@ -148,7 +106,7 @@ const productos=[
         marca:"fargo"
     },
     MixCereal={
-        nombre:"Pan mixcereal fargo 430g",
+        nombre:"pan mixcereal fargo 430g",
         molde:4,
         peso:495,
         conTapa:false,
@@ -159,7 +117,7 @@ const productos=[
         marca:"fargo"
     },
     Lino={
-        nombre:"Pan de lino bimbo 350g",
+        nombre:"pan de lino bimbo 350g",
         molde:4,
         peso:435,
         conTapa:false,
@@ -170,7 +128,7 @@ const productos=[
         marca:"bimbo"
     },
     Integral={
-        nombre:"Pan integral bimbo 320g",
+        nombre:"pan integral bimbo 320g",
         molde:4,
         peso:415,
         conTapa:false,
