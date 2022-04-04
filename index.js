@@ -1,5 +1,4 @@
 
-
 function loadoven() {
     
     let tmold=Number(prompt("el molde tiene 4 cavidades o 5?"));
@@ -33,12 +32,28 @@ function masstime(){
     )
 }
 
-function resumeProducts (){
-const nombres= productos.map((name) =>"\n"+ name.nombre);
+const resumeProducts = () => {
+const nombres= productos.map((name) =>name.nombre);
 console.log(nombres);
-alert(` Los productos para elegir son: \n ${nombres} `)
+//alert(` Los productos para elegir son: \n ${nombres} `)
 }
 
+// Recibo por parámetro el array
+function productListByHTML(productos) {
+    // contenedor asignado
+    let contenedor = document.getElementById("mold");
+  
+    // Recorremos el array y por cada item para el option
+    for (const producto of productos) {
+      // contenedor individual
+      let option = document.createElement("option");
+  
+      option.innerHTML = `<option value=${produto.mold}>${prodcuto.name}</option>`;
+  
+      //agregamos al contenedor  desde el HTML
+      contenedor.appendChild(option);
+    }
+  }
 
 
 const productos=[
