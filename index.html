@@ -6,26 +6,38 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Desafio Entregable</title>
-        <script src="index.js"></script>
     </head>
-<body>
-    <h1>Andres Latorre</h1>
-    <h3>calculos generales para la linea</h3>
-    <h5>cantididad de moldes en carga del horno</h5>
-    <input type="button" onclick="loadoven()" value="haga clic aqui">
-    <h5>cantidad de moldes en los transportes por minuto</h5>
-    <input type="button" onclick="moldcount()" value="haga clic aqui">
-    <h5>calculador de minutos/kilos de masa</h5>
-    <input type="button" onclick="masstime()" value="haga clic aqui">
-    <h5>lista de productos</h5>
-    <input type="button" onclick="resumeProducts()" value="haga clic aqui">
-    <h5>impresion de productos</h5>
-    <input type="button" onclick="productListByHTML()" value="haga clic aqui">
-</body>
-<select name="mold" id="mold">
-    
-</select>
-<br><br>
+
+    <body>
+        <h1>Andres Latorre</h1>
+
+
+        <!-- NUEVO SELECT CREADO POR MATI-->
+        <label for="products">Seleccione un producto:</label><br>
+        <select name="products" id="productList">
+        </select>
+        
+        <h5>destructuracion del objeto  </h5>
+        <input type="button" onclick="destructuracion()" value="haga clic aqui">
+
+
+        <h3>calculos generales para la linea</h3>
+        <h5>cantididad de moldes en carga del horno</h5>
+        <input type="button" onclick="loadoven()" value="haga clic aqui">
+        <h5>cantidad de moldes en los transportes por minuto</h5>
+        <input type="button" onclick="moldcount()" value="haga clic aqui">
+        <h5>calculador de minutos/kilos de masa</h5>
+        <input type="button" onclick="masstime()" value="haga clic aqui">
+        <h5>lista de productos</h5>
+        <input type="button" onclick="resumeProducts()" value="haga clic aqui">
+        <h5>impresion segun  </h5>
+        <input type="button" onclick="getElementOfList()" value="haga clic aqui">
+
+        <!-- SE MOVIÓ INDEX.JS AL FONDO DEL BODY COMO SE RECOMIENDA, Y SE AGREGÓ ARRAY JS PARA PODER USAR SUS VARIABLES EN INDEX.JS-->
+        <script src="index.js"></script>
+        <script src="array.js"></script>
+    </body>
+
 </html>
 <!--
   <form>
