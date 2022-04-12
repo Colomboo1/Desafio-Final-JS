@@ -2,6 +2,7 @@
 // SE POPULA EL SELECT ANTES DE QUE CARGUE LA PAGINA
 window.onload = () => {
     populateProducts();
+
 };
 
 
@@ -16,80 +17,50 @@ const populateProducts = () => {
     });
 };
 
-// SE LLAMA AL PRODUCTO SELECCIONADO DEL ARRAY Y SE GUARDA 
+// SE LLAMA AL PRODUCTO SELECCIONADO DEL ARRAY Y SE GUARDA el OBJETO
 function getElementOfList() {
     
     const valueList = document.getElementById("productList").value;
-    const producto= productos.filter((producto) => producto.id==valueList);
-    console.log("llamada funcion");
-    console.log(producto);
-
+    const producto = productos.filter((producto) => producto.id==valueList)[0]; 
     return producto;
     
 }
-// destructuracion del objeto
-const destructuracion = () => { 
-    console.log(id);
-    console.log(nombre);
-    const {id, nombre, molde, peso, conTapa, tiempoHorneo, tiempoEnf, golpes, rebanadas, marca} = getElementOfList() 
-}
 
-function loadoven(blow,tmold,time) {
-
+function loadoven() {
+    let producto = getElementOfList()
     console.log("llamada funcion ladoven ", producto.molde);
-    console.log("tmold ", tmold)
-    let loader= parseInt(((blow/tmold)*time)/32);
-    console.log
-    console.log(tmold,blow,time)
-    return (
-        alert(loader+" Son los moldes que debe cargar")
-    )   
+    let loader= parseInt(((producto.golpes/producto.molde)*producto.tiempoHorneo)/32);
+    return alert(loader+" Son los moldes que debe cargar");
 } 
 
 function moldcount(){
-    
-    let tmold=Number(prompt("el molde tiene 4 cavidades o 5?"));
-    let blow=Number(prompt("a cuantos golpes va la divisora?"));
-    let countmold= parseInt(blow/tmold);
-    return (
-        alert("deben pasar "+ countmold + " moldes por minuto")
-    )    
+    let producto = getElementOfList()
+    let countmold= parseInt(producto.golpes/producto.molde);
+    return alert("deben pasar "+ countmold + " moldes por minuto");
+   
 }
 
 
 function masstime(){
-    let mass=Number(prompt("cuantos kilos de baja?"));
-    let blow=Number(prompt("a cuantos golpes va la divisora?"));
-    let product=Number(prompt("a cuanto pesa el producto?"));
-    let totaldrop= parseInt(((mass*1000)/product)/blow);
-    return (
-        alert("son: "+ totaldrop + " minutos de IPFM")
-    )
+    let producto = getElementOfList()
+    mass=document.getElementById("baja").value;
+    let totaldrop= parseInt(((mass*1000)/producto.peso)/producto.golpes);
+    return alert("son: "+ totaldrop + " minutos de IPFM");
 }
 
-const resumeProducts = () => {
-const nombres= productos.map((name) =>name.nombre);
-console.log(nombres);
-//alert(` Los productos para elegir son: \n ${nombres} `)
+const resumeProduct= () => {
+let producto = getElementOfList()
+for (const clave in producto) {
+    console.log(`${clave}: ${producto[clave]}`);
+  }
+const products = document.getElementById("productSelected");
+for (let clave in producto){
+    const p = document.createElement("p");
+        p.innerText = `${clave}: ${producto[clave]}`;
+        products.appendChild(p);
+  }
+
+
 }
-
-// ------------------------>>>>>>>>>>>>> COMENTADO POR MATI
-/* // Recibo por parámetro el array
-function productListByHTML(productos) {
-    // contenedor asignado
-    let contenedor = document.getElementById("mold");
-
-    // Recorremos el array y por cada item para el option
-    for (const producto of productos) {
-        // contenedor individual
-        let option = document.createElement("option");
-
-        option.innerHTML = `<option value=${produto.mold}>${prodcuto.name}</option>`;
-
-        //agregamos al contenedor  desde el HTML
-        contenedor.appendChild(option);
-    }
-} */
-
 
 
