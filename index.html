@@ -16,7 +16,7 @@
         <label for="products">Seleccione un producto:</label><br>
         <select name="products" id="productList">
         </select>
-        
+
         <h3>calculos generales para la linea</h3>
         <h5>cantididad de moldes en carga del horno</h5>
         <input type="button" onclick="loadoven()" value="haga clic aqui">
@@ -29,18 +29,19 @@
         
         <h5>caracteristicas del producto</h5>
         <input type="button" onclick="resumeProduct()" value="haga clic aqui">
-        <div for="product" id="productSelected ">
+        <div for="product" id="productSelected">
             
         </div>
 
         
         <!-- 
-            <h5>impresion segun  </h5>
-            <input type="button" onclick="getElementOfList()" value="haga clic aqui">     
         -->
+        <h5>impresion del storage </h5>
+        <input type="button" onclick="downLoadProducts()" value="haga clic aqui">     
 
         <script src="index.js"></script>
         <script src="array.js"></script>
+        <script src="productsList.json"></script>
     </body>
 
 </html>
