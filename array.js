@@ -176,3 +176,7 @@ const productos=[
     }
 ]
 
+<<<<<<< HEAD
+=======
+//module.exports = { productosA };
+>>>>>>> 6a0d852835faf48d72edc0183a1c9019d80e309e
