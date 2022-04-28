@@ -8,10 +8,6 @@ window.onload = () => {
 //FUNCION DE CARGA DE ARRAY AL LOCALSTORAGE
 const uploadList= () =>{
     localStorage.setItem('productos', JSON.stringify(productos));
-<<<<<<< HEAD
-=======
-    console.log("carga en el storage");
->>>>>>> 6a0d852835faf48d72edc0183a1c9019d80e309e
    
 }
 
@@ -31,7 +27,6 @@ const populateProducts = () => {
 
 // SE LLAMA AL PRODUCTO SELECCIONADO DEL ARRAY Y SE GUARDA el OBJETO
 function getElementOfList() {
-<<<<<<< HEAD
     
     const valueList = document.getElementById("productList").value;
     const producto = productosStorage.filter((producto) => producto.id==valueList)[0]; 
@@ -48,35 +43,16 @@ function loadoven() {
         icon: "success",
     })
     
-=======
-    
-    const valueList = document.getElementById("productList").value;
-    const producto = productosStorage.filter((producto) => producto.id==valueList)[0]; 
-    return producto;
-    
-}
-
-// CALCULA LA CANTIDAD DE MOLDES POR COLUMPIO
-function loadoven() {
-    let producto = getElementOfList()
-    console.log("llamada funcion ladoven ", producto.molde);
-    let loader= parseInt(((producto.golpes/producto.molde)*producto.tiempoHorneo)/32);
-    return alert(loader+" moldes que debe cargar por columpio");
->>>>>>> 6a0d852835faf48d72edc0183a1c9019d80e309e
 } 
 
 // CALCULA CANTIDAD DE MOLDES QUE RECORRE LA LINEA
 function moldcount(){
     let producto = getElementOfList()
     let countmold= parseInt(producto.golpes/producto.molde);
-<<<<<<< HEAD
     return Swal.fire({ 
         text:`deben pasar ${countmold} moldes por minuto`,
         icon: "success",
     })
-=======
-    return alert("deben pasar "+ countmold + " moldes por minuto");
->>>>>>> 6a0d852835faf48d72edc0183a1c9019d80e309e
    
 }
 
@@ -85,7 +61,6 @@ function masstime(){
     let producto = getElementOfList()
     mass=document.getElementById("baja").value;
     let totaldrop= parseInt(((mass*1000)/producto.peso)/producto.golpes);
-<<<<<<< HEAD
     return Swal.fire({ 
         text:`son ${totaldrop} minutos de IPFM`,
         icon: "success",
@@ -99,16 +74,6 @@ let producto = getElementOfList()
 const products = document.getElementById("productSelected");
 document.getElementById("productSelected").innerHTML = "";
 
-=======
-    return alert("son: "+ totaldrop + " minutos de IPFM");
-}
-
-// IMPRIME LAS CARACTERISTICAS DEL PRODUCTO SELECCIONADO
-const resumeProduct= () => {
-let producto = getElementOfList()
-
-const products = document.getElementById("productSelected");
->>>>>>> 6a0d852835faf48d72edc0183a1c9019d80e309e
 for (let clave in producto){
     const p = document.createElement("p");
         p.innerText = `${clave}: ${producto[clave]}`;
@@ -118,7 +83,3 @@ for (let clave in producto){
 
 }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 6a0d852835faf48d72edc0183a1c9019d80e309e
