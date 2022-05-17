@@ -4,6 +4,7 @@
 	margin: 0;
     padding: 0;
 }
+
 body{
 	font-family: 'Josefin Sans', sans-serif;
 	text-transform: uppercase;
@@ -14,12 +15,10 @@ body{
 	max-width: 100%;
 }
 
-
 header{
-background-image: url(https://ameba-wpengine.netdna-ssl.com/wp-content/uploads/2016/12/bg-head-bimbo.svg);
-background-color: #00427ae6;
-padding: 50px 0px;
-
+    background-image: url(https://ameba-wpengine.netdna-ssl.com/wp-content/uploads/2016/12/bg-head-bimbo.svg);
+    background-color: #00427ae6;
+    padding: 50px 0px;
 }
 
 div{
@@ -31,8 +30,9 @@ div{
 
 img {
     width: 24px;
-
+    margin: 8px;
 }
+
 article{
 	background-color:#e9d9ba ;
 	background-image: url(https://ameba-wpengine.netdna-ssl.com/wp-content/uploads/2016/12/osito-header.png);
@@ -46,8 +46,7 @@ h1{
     font-weight: bold;
     color: #ffffff;
     font-size: 48px;
-    line-height: 64px;
-    
+    line-height: 64px;  
 }
 
 .swal2-styled.swal2-confirm {
@@ -58,6 +57,7 @@ h1{
     color: #fff;
     font-size: 1em;
 }
+
 .button{
     background: linear-gradient(to bottom, #79bbff 5%, #00427ae6 100%);
     line-height: 20px;
@@ -72,10 +72,12 @@ h1{
     padding: 10px 35px;
 	margin-bottom: 20px;
 }  
+
 .button:hover {
 	background:linear-gradient(to bottom, #80b5ea 5%, #bddbfa 100%);
 	background-color:#80b5ea;
 }
+
 .button:active {
 	position:relative;
 	top:1px;
@@ -92,8 +94,7 @@ h3,label{
     font-size: 25px;
     line-height: 48px;
     color: #23262E;
-    text-transform: uppercase;
-    
+    text-transform: uppercase;  
 } 
 
 input{
@@ -113,7 +114,6 @@ input{
     font-style: normal;
     font-weight: normal;
     margin-bottom: 4px;
-
 }
 
 h5{
@@ -124,6 +124,10 @@ h5{
     font-weight: normal;
     margin-bottom: 10px;
 }  
+
+div#productSelected{
+    display: block;
+}
 
 .mySelect {
 		background: linear-gradient(to bottom, #79bbff 5%, #00427ae6 100%);
@@ -140,10 +144,12 @@ h5{
 		text-shadow: 0px 1px 0px #528ecc;
 		margin-bottom: 25px;
 }
+
 .mySelect:hover {
 	background:linear-gradient(to bottom, #80b5ea 5%, #bddbfa 100%);
 	background-color:#80b5ea;
 }
+
 .mySelect:active {
 	position:relative;
 	top:1px;

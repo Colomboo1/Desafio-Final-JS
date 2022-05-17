@@ -1,15 +1,13 @@
-
 // SE POPULA EL SELECT ANTES DE QUE CARGUE LA PAGINA
 window.onload = () => {
     uploadList();
-    getweather()
+    getweather();
     populateProducts();
-
 };
+
 //FUNCION DE CARGA DE ARRAY AL LOCALSTORAGE
 const uploadList= () =>{
-    localStorage.setItem('productos', JSON.stringify(productos));
-   
+    localStorage.setItem('productos', JSON.stringify(productos)); 
 }
 
 //SE GUARDA LISTA DEL STORAGE EN UNA CONSTANTE
@@ -28,11 +26,9 @@ const populateProducts = () => {
 
 // SE LLAMA AL PRODUCTO SELECCIONADO DEL ARRAY Y SE GUARDA el OBJETO
 function getElementOfList() {
-    
     const valueList = document.getElementById("productList").value;
     const producto = productosStorage.filter((producto) => producto.id==valueList)[0]; 
     return producto;
-    
 }
 
 // CALCULA LA CANTIDAD DE MOLDES POR COLUMPIO
@@ -42,8 +38,7 @@ function loadoven() {
     return Swal.fire({ 
         text:`deben cargar ${loader} moldes por columpio`,
         icon: "success",
-    })
-    
+    }) 
 } 
 
 // CALCULA CANTIDAD DE MOLDES QUE RECORRE LA LINEA
@@ -53,11 +48,10 @@ function moldcount(){
     return Swal.fire({ 
         text:`deben pasar ${countmold} moldes por minuto`,
         icon: "success",
-    })
-   
+    })  
 }
 
-// CALCULA LOS MIN. CON RESPECTOA  LOS KILOS DE BAJA
+// CALCULA LOS MIN. CON RESPECTO A LOS KILOS DE BAJA
 function masstime(){
     let producto = getElementOfList()
     mass=document.getElementById("baja").value;
@@ -65,16 +59,14 @@ function masstime(){
     return Swal.fire({ 
         text:`son ${totaldrop} minutos de IPFM`,
         icon: "success",
-
     })
 }
 
-// IMPRIME LAS CARACTERISTICAS DEL PRODUCTO SELECCIONADO  PISANDO EL PRODUCT
+// IMPRIME LAS CARACTERISTICAS DEL PRODUCTO SELECCIONADO PISANDO EL PRODUCTO ANTERIOR
 const resumeProduct= () => {
 let producto = getElementOfList()
 const products = document.getElementById("productSelected");
 document.getElementById("productSelected").innerHTML = "";
-
 for (let clave in producto){
     const p = document.createElement("p");
         p.innerText = `${clave}: ${producto[clave]}`;

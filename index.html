@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Desafio Entregable</title>
+        <title>Desafio Final</title>
         <link rel="stylesheet" type="text/css" href="style.css">
 
     </head>
@@ -15,47 +15,35 @@
             <h1>Andres Latorre --- Proyecto Final</h1>
         </header>
 
-        
         <article>
             <div id="weather"></div>
             <label for="products">Seleccione un producto:</label>
-            <select class= "mySelect" name="products" id="productList">
-            </select>
-            
+            <select class= "mySelect" name="products" id="productList"></select>
+        
+            <h3>Calculos generales para la linea</h3>
 
-            <h3>calculos generales para la linea</h3>
-
-            <h5>cantididad de moldes en carga del horno</h5>
+            <h5>Cantididad de moldes en carga del horno</h5>
             <input class = "button" type="button" onclick="loadoven()" value="haga clic aqui">
 
-            <h5>cantidad de moldes en los transportes por minuto</h5>
+            <h5>Cantidad de moldes en los transportes por minuto</h5>
             <input class = "button" type="button" onclick="moldcount()" value="haga clic aqui">
             
-            <h5>calculador de minutos/kilos de masa</h5>
+            <h5>Calculador de minutos/kilos de masa</h5>
             <label class="labelInput" for="baja">Ingrese los kg de baja:</label>
             <input type="number" value="" id="baja">
             <input class = "button" type="button" onclick="masstime()" value="haga clic aqui">
 
-            <h5>caracteristicas del producto</h5>
+            <h5>Caracteristicas del producto</h5>
             <input class = "button" type="button" onclick="resumeProduct()" value="haga clic aqui">
 
-            <div for="product" id="productSelected">  
-            </div>
-    
+            <div  for="product" id="productSelected"></div>
+            
         </article>
-        
-        <!-- 
-            <img src="https://ameba-wpengine.netdna-ssl.com/wp-content/uploads/2016/12/osito-header.png" alt="ositoBimbo">
-        -->     
-        
-        <script src="sweetAlert.js"></script>
+
         <script src="index.js"></script>
         <script src="weather.js"></script>
         <script src="array.js"></script>
+        <script src="sweetAlert.js"></script>
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-      
-
-
     </body>
-
 </html>
