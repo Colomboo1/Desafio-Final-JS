@@ -21,6 +21,18 @@ background-color: #00427ae6;
 padding: 50px 0px;
 
 }
+
+div{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: #23262E;
+}
+
+img {
+    width: 24px;
+
+}
 article{
 	background-color:#e9d9ba ;
 	background-image: url(https://ameba-wpengine.netdna-ssl.com/wp-content/uploads/2016/12/osito-header.png);
@@ -30,12 +42,14 @@ article{
 }
 
 h1{
-	font-family: 'Josefin Sans';
-	font-weight: bold;
-	color: #ffffff;
-	font-size: 48px;
-	line-height: 64px;
+    font-family: 'Josefin Sans';
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 48px;
+    line-height: 64px;
+    
 }
+
 .swal2-styled.swal2-confirm {
     border: 0;
     border-radius: 0.25em;

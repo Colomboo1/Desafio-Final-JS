@@ -2,6 +2,7 @@
 // SE POPULA EL SELECT ANTES DE QUE CARGUE LA PAGINA
 window.onload = () => {
     uploadList();
+    getweather()
     populateProducts();
 
 };
